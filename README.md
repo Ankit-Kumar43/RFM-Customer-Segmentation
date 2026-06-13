@@ -50,3 +50,11 @@ SELECT
     m_score,
     CONCAT(r_score, f_score, m_score) AS rfm_cell_score
 FROM rfm_scores;
+
+
+## 📊 Power BI Interactive Dashboard
+
+You can find the Power BI project file (`.pbix`) in the `Dashboard/` folder. 
+
+Here is the preview of the interactive dashboard:
+![Dashboard Screenshot](Dashboard/dashboard_screenshot.png)
