@@ -1,0 +1,59 @@
+# RFM Customer Segmentation Project
+
+## 📌 Project Overview
+This project focuses on **RFM (Recency, Frequency, Monetary) Analysis**, a data-driven customer segmentation technique used to evaluate customer value. By analyzing historical transaction data, customers are segmented into distinct groups (such as *Champions, Loyal Customers, At Risk, and Hibernating*) to help businesses design targeted marketing strategies, improve customer retention, and maximize revenue.
+
+---
+
+## 🛠️ Tech Stack & Tools
+*   **Database/Querying:** SQL (Data extraction, cleaning, and RFM scoring)
+*   **Data Visualization & Dashboarding:** Power BI / Excel
+*   **Methodology:** RFM Segmentation, Quantile-based Scoring
+
+---
+
+## 📊 RFM Metrics Defined
+1.  **Recency (R):** How recently a customer made a purchase. (Lower values mean more recent in raw days, but scored higher).
+2.  **Frequency (F):** How often a customer makes a purchase within a defined period.
+3.  **Monetary (M):** How much money a customer spends over that period.
+
+---
+
+## 🚀 Key Features & Workflow
+
+### 1. Data Cleaning & Preparation
+*   Handled missing values and removed duplicate transactions.
+*   Filtered out negative quantities and returns to ensure revenue accuracy.
+
+### 2. SQL Implementation (RFM Scoring)
+*   Calculated raw R, F, and M values for each unique customer.
+*   Used `NTILE(5)` or percentile ranking to assign scores from 1 to 5 for Recency, Frequency, and Monetary metrics.
+*   Concatenated scores to create a final **RFM Score** (e.g., `555`, `111`).
+
+### 3. Customer Segmentation Logic
+Customers were grouped into actionable segments based on their scores:
+*   **Champions (555, 554):** Bought recently, buy frequently, and spend the most.
+*   **Loyal Customers (444, 544):** Spend regularly and are responsive to promotions.
+*   **Can't Lose Them (155, 245):** Spent a lot and bought frequently, but haven't returned in a long time.
+*   **Hibernating / Lost (111, 112):** Low appearance, low spending, hasn't bought in a long time.
+
+### 4. Power BI Dashboard Insights
+*   **Executive Summary:** Total Revenue, Total Customers, and Average Order Value (AOV).
+*   **Segment Distribution:** Visualizing the percentage of customers in each segment using Donut/Bar charts.
+*   **Treemap Analysis:** Comparing total monetary contribution by each customer segment.
+
+---
+
+## 📈 Business Outcomes & Impact
+*   **Targeted Marketing:** Identified high-value customers for exclusive loyalty programs.
+*   **Churn Prevention:** Spotted "At Risk" customers early to trigger re-engagement email campaigns.
+*   **Resource Optimization:** Reduced marketing spend by avoiding promotions on inactive/lost segments.
+
+---
+
+## 📁 Repository Structure
+```text
+├── Data/               # Raw or cleaned dataset (CSV/Excel)
+├── SQL_Scripts/        # SQL queries for RFM Calculation & Segmentation
+├── Dashboard/          # Power BI Desktop file (.pbix) or screenshots
+└── README.md           # Project documentation'[]
